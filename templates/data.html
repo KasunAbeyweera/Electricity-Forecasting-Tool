@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PowerProphet</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='data_style.css') }}">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+</head>
+
+<body>
+	<!-- Header -->
+    <header>
+  <div class="page-title">Data Input</div>
+  <div class="user-info">
+    <img src="{{ url_for('static', filename='face.jpeg') }}" alt="Profile picture" class="profile-picture">
+    <span class="user-name">John Doe</span>
+  </div>
+    </header>
+
+
+
+<div class="sidebar">
+  <div class="logo">PowerProphet<span class="material-icons">bolt</span></div>
+    <br>
+
+  <!-- Top options -->
+  <ul class="options options-top">
+    <li><a href="/account"><span class="material-icons">account_circle</span> My Account</a></li>
+    <li><a href="/"><span class="material-icons">insights</span> Predictions</a></li>
+    <li><a href="/dataInput"><span class="material-icons">movie_edit</span> Data Input</a></li>
+  </ul>
+
+  <!-- Bottom options -->
+  <ul class="options options-bottom">
+    <li><a href="/settings"><span class="material-icons">settings</span> Settings</a></li>
+    <li><a href="/about"> About Project</a></li>
+    <li><a href="/contact"> Contact Us</a></li>
+    <li><a href="#"><span class="material-icons">logout</span> Log Out</a></li>
+  </ul>
+</div>
+    <div class="content">
+		<!-- Dashboard -->
+		<div class="dashboard">
+			<h1>Uploaded Datasets</h1>
+            <table>
+                <thead>
+                <tr>
+                    <th>Dataset Name</th>
+                    <th>Last Updated</th>
+                    <th>Upload Dataset</th>
+                    <th>Download Dataset</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Consumption.csv</td>
+                    <td>March 1, 2023</td>
+                    <td>
+                        <form action="upload.php" method="post" enctype="multipart/form-data">
+                            <input type="file" name="dataset_file">
+                            <input type="submit" value="Upload">
+                        </form>
+                    </td>
+                    <td><a href="#">Download</a></td>
+                </tr>
+                <tr>
+                    <td>revenueTotal.csv</td>
+                    <td>February 28, 2023</td>
+                    <td>
+                        <form action="upload.php" method="post" enctype="multipart/form-data">
+                            <input type="file" name="dataset_file">
+                            <input type="submit" value="Upload">
+                        </form>
+                    </td>
+                    <td><a href="#">Download</a></td>
+                </tr>
+                <tr>
+                    <td>residentialRevenue.csv</td>
+                    <td>March 15, 2023</td>
+                    <td>
+                        <form action="upload.php" method="post" enctype="multipart/form-data">
+                            <input type="file" name="dataset_file">
+                            <input type="submit" value="Upload">
+                        </form>
+                    </td>
+                    <td><a href="#">Download</a></td>
+                </tr>
+                <tr>
+                    <td>Sales.csv</td>
+                    <td>March 18, 2023</td>
+                    <td>
+                        <form action="upload.php" method="post" enctype="multipart/form-data">
+                            <input type="file" name="dataset_file">
+                            <input type="submit" value="Upload">
+                        </form>
+                    </td>
+                    <td><a href="#">Download</a></td>
+                </tr>
+                <tr>
+                    <td>percapita.csv</td>
+                    <td>March 19, 2023</td>
+                    <td>
+                        <form action="upload.php" method="post" enctype="multipart/form-data">
+                            <input type="file" name="dataset_file">
+                            <input type="submit" value="Upload">
+                        </form>
+                    </td>
+                    <td><a href="#">Download</a></td>
+                </tr>
+                <tr>
+                    <td>Generation_dataset_combined.csv</td>
+                    <td>March 19, 2023</td>
+                    <td>
+                        <form action="upload.php" method="post" enctype="multipart/form-data">
+                            <input type="file" name="dataset_file">
+                            <input type="submit" value="Upload">
+                        </form>
+                    </td>
+                    <td><a href="#">Download</a></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
