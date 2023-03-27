@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PowerProphet</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style02.css') }}">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+<header>
+    <div class="page-title">Dashboard</div>
+    <div class="user-info">
+        <img src="{{ url_for('static', filename='face.jpeg') }}" alt="Profile picture" class="profile-picture">
+        <span class="user-name">John Doe</span>
+    </div>
+</header>
+<div class="sidebar">
+    <div class="logo">PowerProphet<span class="material-icons">bolt</span></div>
+    <br>
+    <ul class="options options-top">
+        <li><a href="/account"><span class="material-icons">account_circle</span> My Account</a></li>
+        <li><a href='/'><span class="material-icons">insights</span> Predictions</a></li>
+        <li><a href="/dataInput"><span class="material-icons">movie_edit</span> Data Input</a></li>
+    </ul>
+    <ul class="options options-bottom">
+        <li><a href="/settings"><span class="material-icons">settings</span> Settings</a></li>
+        <li><a href="/about"> About Project</a></li>
+        <li><a href="/contact"> Contact Us</a></li>
+        <li><a href="#"><span class="material-icons">logout</span> Log Out</a></li>
+    </ul>
+</div>
+<div class="content">
+    <div class="dashboard">
+        <h1>Revenue Prediction</h1>
+        <div class="window-row one">
+            <div class="window window-1">
+                <div class="one-row_1">
+                    <h2><span class="material-icons">trending_up</span> Total Revenue</h2>
+                </div>
+                <div class="two-row_1">
+                    <p style="margin-left: 23px;"><br>  ${{ prediction }} Billion<br></p>
+                </div>
+                <div class="three-row_1">
+                    <p style="margin-left: 23px;"><br>{{prediction_03 }}     &nbsp;&nbsp; {{ prediction_04 }}B This Month <br></p>
+                </div>
+            </div>
+            <div class="window">
+                <div class="one-row_1">
+                    <h2><span class="material-icons">electric_meter</span> Total Sales</h2>
+                </div>
+                <div class="two-row_1">
+                    <p style="margin-left: 23px;"><br>     MWh {{ prediction_02 }} Million <br></p>
+                </div>
+                <div class="three-row_1">
+                    <p style="margin-left: 23px;"><br>{{ prediction_05 }}&nbsp;&nbsp;      {{ prediction_06 }}M This Month<br></p>
+                </div>
+            </div>
+            <div class="window">
+                <div class="one-row_1">
+                    <h2><span class="material-icons">home</span> Residential Revenue</h2>
+                </div>
+                <div class="two-row_1">
+                    <p style="margin-left: 23px;"><br>${{ prediction_09 }} Billion<br></p>
+                </div>
+                <div class="three-row_1">
+                    <p style="margin-left: 23px;"><br>{{ prediction_07 }}&nbsp;&nbsp;      {{ prediction_08 }}B This Month<br></p>
+                </div>
+            </div>
+        </div>
+        <div class="window-row">
+            <div class="window window-large">
+                <div class="one-row">
+                    <div class="Dashboard-name">
+                        <h2>Monthly Revenue</h2>
+                    </div>
+                    <div class="dropdown">
+                        <input type="checkbox" id="dropdown">
+                        <label class="dropdown__face" for="dropdown">
+                            <div class="dropdown__text">Select Prediction</div>
+                            <div class="dropdown__arrow"></div>
+                        </label>
+                        <ul class="dropdown__items">
+                            <li onclick="window.location.href='/'">Revenue Prediction</li>
+                            <li onclick="window.location.href='/con-prediction'">Consumption Prediction</li>
+                            <li onclick="window.location.href='/gen-prediction'">Generation Prediction</li>
+                        </ul>
+                    </div>
+{#                    <svg>#}
+{#                        <filter id="goo">#}
+{#                            <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />#}
+{#                            <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />#}
+{#                            <feBlend in="SourceGraphic" in2="goo" />#}
+{#                        </filter>#}
+{#                    </svg>#}
+                    <div class="dropdown dropdown--right">
+                        <input type="checkbox" id="dropdown2">
+                        <label class="dropdown__face" for="dropdown2">
+                            <div class="dropdown__text",>All USA</div>
+                            <div class="dropdown__arrow"></div>
+                        </label>
+                        <ul class="dropdown__items">
+                            <li>All Country</li>
+                            <li>Arizona</li>
+                            <li>Florida</li>
+                            <li>Delaware</li>
+                            <li>New York</li>
+                        </ul>
+                    </div>
+                </div>
+{#                 <p id ="chart"></p>#}
+                <p>
+                    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                    <canvas id="myChart" class="canvas"></canvas>
+                    <script>
+                         var ctx = document.getElementById('myChart').getContext('2d');
+                         var myChart = new Chart(ctx, {
+                             type: "line",
+                             data: {
+                                 labels: {{ labels|tojson }},
+                                 datasets: [{
+                                     label: 'Total Sales',
+                                     data: {{ data|tojson }},
+                                     backgroundColor: 'rgb(120, 120, 120)',
+                                     borderColor: 'rgb(80, 80, 80)',
+                                     borderWidth: 1
+                                 }]
+                             },
+                             options: {
+                                 scales: {
+                                     y: {
+                                         beginAtZero: false
+                                     }
+                                 }
+                             }
+                         });
+                     </script>
+                </p>
+            </div>
+            <div class="window window-medium">
+                <div class="one-row_1">
+                    <h2>Top States</h2>
+                </div>
+                <div class="two-row_1">
+                    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                    <canvas id="myChart2" class="canvas2"></canvas>
+                    <script>
+                        var ctx = document.getElementById('myChart2').getContext('2d');
+                        var myChart = new Chart(ctx, {
+                            type: "doughnut",
+                            data: {
+                                labels: {{ labels_top5|tojson }},
+                                datasets: [{
+                                    data: {{ data_top5|tojson }},
+                                    backgroundColor: [
+                                        'rgb(40, 40, 40)',
+                                        'rgb(80, 80, 80)',
+                                        'rgb(120, 120, 120)',
+                                        'rgb(160, 160, 160)',
+                                        'rgb(200, 200, 200)'
+                                    ],
+                                    borderColor: 'rgb(120, 120, 120)',
+                                    borderWidth: 1
+                                }]
+                            },
+                            options: {
+                                scales: {
+                                    y: {
+                                        beginAtZero: false
+                                    }
+                                    },
+                                plugins: {
+                                    legend: {
+                                        display: true
+                                    }
+                                }
+                            }
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+{#<script src='https://cdn.plot.ly/plotly-latest.min.js'></script>#}
+{#<script type='text/javascript'>#}
+{#var graphs = {{graphJSON | safe}};#}
+{#Plotly.plot('chart',graphs,{});#}
+{#</script>#}
+</html>
