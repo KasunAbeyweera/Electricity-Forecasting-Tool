@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PowerProphet</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+</head>
+
+<body>
+	<!-- Header -->
+    <header>
+        <div class="page-title">Process Unsuccessful</div>
+        <img class="dashboard__image" src="{{ url_for('static', filename='Fail.png') }}" alt="Success" width="49" height="45">
+    </header>
+
+
+
+<div class="sidebar">
+  <div class="logo">PowerProphet<span class="material-icons">bolt</span></div>
+    <br>
+
+  <!-- Top options -->
+  <ul class="options options-top">
+    <li><a href="/account"><span class="material-icons">account_circle</span> My Account</a></li>
+    <li><a href="/"><span class="material-icons">insights</span> Predictions</a></li>
+    <li><a href="/dataInput"><span class="material-icons">movie_edit</span> Data Input</a></li>
+  </ul>
+
+  <!-- Bottom options -->
+  <ul class="options options-bottom">
+    <li><a href="/about"> About Project</a></li>
+    <li><a href="/contact"> Contact Us</a></li>
+    <li><a href="/logout"><span class="material-icons">logout</span> Log Out</a></li>
+  </ul>
+</div>
+
+	<!-- Content -->
+	<section class="content">
+	<!-- Dashboard -->
+	<div class="dashboard">
+		<h1>Please Try Again !</h1>
+	</div>
+    </section>
+
+</body>
+</html>

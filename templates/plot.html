@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chart.js Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <canvas id="myChart"></canvas>
+    <script>
+      // Load the JSON data from the "Sales.json" file
+      fetch('Sales.json')
+        .then(response => response.json())
+        .then(data => {
+          // Parse the JSON data to a JavaScript object
+          const salesData = JSON.parse(data);
+
+          // Extract the x and y data
+          const xData = salesData.map(d => d.Date);
+          const yData = salesData.map(d => d.totalSales);
+
+          // Create a Chart.js chart
+          const ctx = document.getElementById('myChart').getContext('2d');
+          const myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+              labels: xData,
+              datasets: [{
+                label: 'Sales',
+                data: yData,
+                borderColor: 'rgb(255, 99, 132)',
+                fill: false
+              }]
+            },
+            options: {
+              responsive: true,
+              plugins: {
+                title: {
+                  display: true,
+                  text: 'Sales'
+                }
+              },
+              scales: {
+                x: {
+                  type: 'time',
+                  time: {
+                    unit: 'day',
+                    displayFormats: {
+                      day: 'MMM D'
+                    }
+                  },
+                  title: {
+                    display: true,
+                    text: 'Date'
+                  }
+                },
+                y: {
+                  title: {
+                    display: true,
+                    text: 'Total Sales'
+                  }
+                }
+              }
+            }
+          });
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PowerProphet</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+</head>
+
+<body>
+	<!-- Header -->
+    <header>
+  <div class="page-title">Account</div>
+    </header>
+
+
+
+<div class="sidebar">
+  <div class="logo">PowerProphet<span class="material-icons">bolt</span></div>
+    <br>
+
+  <!-- Top options -->
+  <ul class="options options-top">
+    <li><a href="/account"><span class="material-icons">account_circle</span> My Account</a></li>
+    <li><a href="/"><span class="material-icons">insights</span> Predictions</a></li>
+    <li><a href="/dataInput"><span class="material-icons">movie_edit</span> Data Input</a></li>
+  </ul>
+
+  <!-- Bottom options -->
+  <ul class="options options-bottom">
+    <li><a href="/about"> About Project</a></li>
+    <li><a href="/contact"> Contact Us</a></li>
+    <li><a href="/logout"><span class="material-icons">logout</span> Log Out</a></li>
+  </ul>
+</div>
+
+	<!-- Content -->
+	<div class="content">
+		<!-- Dashboard -->
+		<div class="dashboard">
+		</div>
+        <div class="loginForm2">
+            <h2>Percapita Revenue</h2>
+            <form action="/insert_percapita" method="post">
+                <label for="email">Date</label>
+                <input type="text" id="email" name="email" required placeholder="1/31/1998">
+                <label for="text">Percapita</label>
+                <input type="text" id="password" name="password" required placeholder="19">
+                <input type="submit" value="Update" id="submit">
+            </form>
+            <div class="signup">
+                <p>Please Add Data According To The Given Format</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

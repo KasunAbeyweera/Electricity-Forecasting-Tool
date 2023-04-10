@@ -1,7 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="5d630403-b0b7-4c61-895c-c83ff9b73cca" name="Changes" comment="" />
+    <list default="true" id="5d630403-b0b7-4c61-895c-c83ff9b73cca" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Datasets/DeResidentialRevenue.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Datasets/DeSales.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Methods/Consumption/plot.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Methods/Consumption/predict.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Methods/Generation/plot.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Methods/Generation/predict.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Methods/Generation/predictGraph.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Models/Generation_Models/gen2_model_de.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Models/Generation_Models/gen2_model_weights_de.h5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Models/Generation_Models/gen3_model_de.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Models/Generation_Models/gen3_model_weights_de.h5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/Success.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/fail.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/consumption_data.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/contact.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/create_account.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/generation_data.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/my_account.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/percapita_data.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/plot.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/residentialRevenue_data.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/revenueTotal_data.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/sales_data.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/success.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/unsuccess.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/account.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/data.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/data.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,6 +55,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Users/kasun/Downloads/Electricity-Forecasting-Tool2/Methods/Generation",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -28,7 +64,39 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\kasun\Downloads\Electricity-Forecasting-Tool2\Methods\Generation" />
+      <recent name="C:\Users\kasun\Downloads\Electricity-Forecasting-Tool2\Models\Generation_Models" />
+      <recent name="C:\Users\kasun\Downloads\Electricity-Forecasting-Tool2\templates" />
+      <recent name="C:\Users\kasun\Downloads\Electricity-Forecasting-Tool2" />
+      <recent name="C:\Users\kasun\Downloads\Electricity-Forecasting-Tool2\Datasets" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.app">
+    <configuration name="app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\kasun\PycharmProjects\pythonProject\venv\Scripts\python.exe" />
+      <option name="SDK_NAME" value="Python 3.10 (pythonProject)" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="Electricity-Forecasting-Tool" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -51,6 +119,11 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.app" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -61,6 +134,7 @@
       <option name="presentableId" value="Default" />
       <updated>1679846759409</updated>
       <workItem from="1679846760536" duration="495000" />
+      <workItem from="1681088296767" duration="3294000" />
     </task>
     <servers />
   </component>
